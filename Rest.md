@@ -116,7 +116,22 @@ o.z = 3;
 var x, y, z;
 
 // Destructuring assignment allows nested objects
-({ x, ...{ y, z } } = o);
+({ x, y, z } = o);
+x; // 1
+y; // 2
+z; // 3
+
+//OR
+
+({ x, ...z } = o);
+x; // 1
+y; // undefined
+z; // 3
+
+//OR
+
+({ x, z}  = o);
+
 x; // 1
 y; // undefined
 z; // 3
